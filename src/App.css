@@ -1,0 +1,240 @@
+body {
+  background: #d6dee7;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main-split {
+  display: flex;
+  min-height: 100vh;
+  background: #d6dee7;
+}
+
+.left-clean,
+.left-dimmed {
+  width: 58vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.35s;
+}
+
+.left-clean {
+  background: #d6dee7;
+}
+.left-dimmed {
+  background: rgba(44, 82, 130, 0.15);
+  filter: blur(0.1px) brightness(0.94);
+}
+
+.save-btn {
+  font-size: 24px;
+  background: transparent;
+  color: #fff;
+  border: 3px solid #fff;
+  padding: 28px 68px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  box-shadow: 0 2px 30px #3335;
+  transition: box-shadow 0.2s;
+}
+.save-btn:hover {
+  box-shadow: 0 6px 34px #3336;
+}
+
+.modal-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #fff;
+  min-width: 490px;
+  width: 42vw;
+  max-width: 670px;
+  height: 100vh;
+  box-shadow: -3px 0 46px #5394c239;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  animation: slideIn 0.3s;
+}
+
+@keyframes slideIn {
+  from { right: -500px; opacity: 0.5;}
+  to { right: 0; opacity: 1;}
+}
+
+.modal-header {
+  padding: 40px 36px 14px;
+  font-size: 25px;
+  color: #1872a4;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  border-bottom: 1.5px solid #f2f8fa;
+}
+
+.back-arrow {
+  font-size: 30px;
+  color: #1872a4;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.modal-title {
+  font-size: 25px;
+  font-weight: 600;
+  color: #1872a4;
+  margin-bottom: 4px;
+}
+
+.modal-content {
+  padding: 0 36px 0 36px;
+  margin-top: 13px;
+  max-width: 590px;
+}
+
+.input-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+}
+
+.popup-input {
+  width: 100%;
+  padding: 16px 13px;
+  border: 1.5px solid #c7e5fa;
+  border-radius: 5px;
+  font-size: 17px;
+  margin-bottom: 20px;
+  background: #f7fbff;
+}
+
+.schema-legend {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 15px;
+  margin-bottom: 25px;
+  gap: 38px;
+  margin-right: 8px;
+}
+.legend-item.user {
+  color: #20c830;
+  font-weight: 500;
+}
+.legend-item.group {
+  color: #e43d8c;
+  font-weight: 500;
+}
+
+.schemas-box {
+  border: 2px solid #b1d6f7;
+  border-radius: 6px;
+  padding: 19px 17px 17px;
+  background: #fcfdff;
+  margin-bottom: 40px;
+  margin-top: 8px;
+  min-width: 340px;
+}
+
+.schema-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.schema-dot {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background: #d1d1d1;
+  margin-right: 12px;
+}
+
+.popup-select {
+  width: 68%;
+  margin-right: 16px;
+  padding: 10px 11px;
+  border: 1.5px solid #b9d2ee;
+  border-radius: 5px;
+  font-size: 16px;
+  background: #f7fbff;
+}
+
+.add-link {
+  display: block;
+  color: #14b5b8;
+  cursor: pointer;
+  font-size: 17px;
+  text-decoration: underline;
+  font-weight: 550;
+  margin-top: 4px;
+  margin-left: 38px;
+}
+
+.remove-schema {
+  background: #f5f7fa;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+  padding: 2px 16px;
+  cursor: pointer;
+  color: #8893ab;
+  margin-left: 10px;
+}
+.remove-schema:hover {
+  background: #f4c4c4;
+  color: #d82b4a;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 0 36px 44px;
+  margin-top: 26px;
+}
+
+.save-segment-btn {
+  background: #22ca98;
+  color: #fff;
+  padding: 16px 58px;
+  border: none;
+  border-radius: 7px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #1877f240;
+  transition: background 0.2s;
+}
+.save-segment-btn:hover {
+  background: #0fb186;
+}
+
+.cancel-btn {
+  background: #fff;
+  color: #e43d8c;
+  border: 1.5px solid #e43d8c;
+  font-weight: 600;
+  border-radius: 7px;
+  padding: 16px 42px;
+  font-size: 19px;
+  margin-top: 0;
+  cursor: pointer;
+}
+.cancel-btn:hover {
+  background: #fbe8f2;
+}
+.input-label,
+.modal-description {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 16px;
+  color: #353c4f;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
